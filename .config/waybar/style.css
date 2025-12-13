@@ -1,0 +1,45 @@
+@import "latte.css";
+
+* {
+  font-family: "FiraCode Nerd Font Mono", FontAwesome, sans-serif;
+  font-size: 18px;
+  min-height: 0;
+}
+
+#waybar {
+  background: alpha(@base, 0.2);
+  color: @text;
+  margin: 5px 5px;
+}
+
+#workspaces {
+}
+
+#workspaces button {
+  color: @text;
+  border-radius: 0;
+  background-color: @surface0;
+  padding: 0px 4px;
+  margin-right: 4px;
+}
+
+#workspaces button.active {
+  background-color: @lavender;
+}
+
+
+#tray,
+#clock,
+#window,
+#network,
+#battery,
+#language,
+#keyboard,
+#bluetooth,
+#pulseaudio,
+#custom-power,
+#custom-colorpicker,
+#custom-hypr_mode {
+  background-color: @surface0;
+  padding: 0 1rem;
+}
