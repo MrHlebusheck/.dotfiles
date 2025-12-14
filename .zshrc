@@ -36,8 +36,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 
-# Added by CodeRabbit CLI installer
-export PATH="/home/hlebusheck/.local/bin:$PATH"
+export PATH="/home/hlebusheck/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin:$PATH"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
