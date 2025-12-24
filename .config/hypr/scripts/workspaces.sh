@@ -3,7 +3,6 @@
 case $1 in
 init)
   monitors=$(hyprctl monitors -j)
-
   echo "$monitors" | jq -r '.[] | "\(.id),\(.name)"' | while IFS=',' read -r id name; do
     for i in $(seq 1 10); do
       workspace=$((10 * $id + $i))
@@ -14,7 +13,6 @@ init)
     monitor=$((($ws - 1) / 10))
     hyprctl dispatch moveworkspacetomonitor $ws $monitor
   done
-  hyprctl dispatch workspace 1
   ;;
 
 switch)

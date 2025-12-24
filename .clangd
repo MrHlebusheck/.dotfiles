@@ -1,0 +1,50 @@
+Diagnostics:
+  ClangTidy:
+    FastCheckFilter: None
+    Add:
+      - "*"
+    Remove:
+      - performance-no-int-to-ptr
+      - cppcoreguidelines-pro-type-reinterpret-cast
+      - cert-err33-c
+      - llvmlibc-inline-function-decl
+      - cppcoreguidelines-pro-type-union-access
+      - "*vararg"
+      - readability-avoid-const-params-in-decls
+      - performance-unnecessary-value-param
+      - modernize-use-transparent-functors
+      - "android*"
+      - readability-isolate-declaration
+      - altera-id-dependent-backward-branch
+      - readability-implicit-bool-conversion
+      - readability-identifier-length
+      - readability-magic-numbers
+      - cppcoreguidelines-avoid-magic-numbers
+      - llvmlibc-restrict-system-libc-headers
+      - misc-use-anonymous-namespace
+      - llvmlibc-implementation-in-namespace
+      - llvmlibc-callee-namespace
+      - modernize-use-trailing-return-type
+      - google-objc-function-naming
+      - cppcoreguidelines-pro-bounds-array-to-pointer-decay
+      - hicpp-no-array-decay
+      - cppcoreguidelines-narrowing-conversions
+      - bugprone-narrowing-conversions
+      - bugprone-implicit-widening-of-multiplication-result
+      - cppcoreguidelines-owning-memory
+      - "*-avoid-c-arrays"
+      - "*-no-malloc"
+      - altera-struct-pack-align
+      - "boost-*"
+      - "*-braces-around-statements"
+      - altera-unroll-loops
+      - misc-non-private-member-variables-in-classes
+      - fuchsia-overloaded-operator
+      - bugprone-easily-swappable-parameters
+      - "*pass-by-value"
+      - fuchsia-default-arguments-calls
+      - "*explicit-constructor"
+      - "*explicit-conversions"
+
+    CheckOptions:
+      misc-const-correctness.WarnPointersAsValues: true
