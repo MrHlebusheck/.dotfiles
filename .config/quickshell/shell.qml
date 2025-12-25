@@ -1,18 +1,8 @@
-import Quickshell
 import QtQuick
+import Quickshell
+import "bar"
 
-PanelWindow {
-  anchors {
-    top: true
-    left: true
-    right: true
-  }
-
-  implicitHeight:30
-
-  Text {
-    anchors.centerIn:parent
-
-    text: "hello world"
-  }
+ShellRoot {
+    id: root
+    Bar {}
 }

@@ -9,7 +9,7 @@ init)
       hyprctl keyword workspace "$workspace,monitor:$name"
     done
   done
-  for ws in $(hyprctl workspaces -j | jq '.[] .id'); do
+  for ws in $(hyprctl workspaces -j | jq '.[] .id' | tac); do
     monitor=$((($ws - 1) / 10))
     hyprctl dispatch moveworkspacetomonitor $ws $monitor
   done

@@ -1,9 +1,21 @@
+CompileFlags:
+  Remove:
+    - -mno-direct-extern-access
 Diagnostics:
   ClangTidy:
     FastCheckFilter: None
     Add:
       - "*"
     Remove:
+      - readability-static-accessed-through-instance
+      - "*-use-auto"
+      - misc-const-correctness
+      - cppcoreguidelines-explicit-virtual-functions
+      - cppcoreguidelines-special-member-functions
+      - hicpp-special-member-functions
+      - hicpp-use-override
+      - modernize-use-override
+      - fuchsia-default-arguments-declarations
       - performance-no-int-to-ptr
       - cppcoreguidelines-pro-type-reinterpret-cast
       - cert-err33-c
