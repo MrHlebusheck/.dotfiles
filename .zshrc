@@ -9,6 +9,7 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 
 alias e='nvim'
+alias sshf='ssh -i ~/.ssh/flowbox.ssh -F ~/fbx/gitlab/install/support/ssh-config-flowbox'
 
 export MANPAGER='nvim +Man!'
 export VCPKG_ROOT=~/.vcpkg
